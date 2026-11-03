@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550" role="img" aria-label="Multifamily residences illustration">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16233C"/><stop offset="1" stop-color="#090F1C"/>
+    </linearGradient>
+    <linearGradient id="glow4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#C9A356" stop-opacity=".2"/><stop offset="1" stop-color="#C9A356" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="550" fill="url(#bg4)"/>
+  <g stroke="#ffffff" stroke-opacity=".035">
+    <path d="M0 70h800M0 140h800M0 210h800M0 280h800M0 350h800M0 420h800M0 490h800"/>
+    <path d="M80 0v550M160 0v550M240 0v550M320 0v550M400 0v550M480 0v550M560 0v550M640 0v550M720 0v550"/>
+  </g>
+  <rect x="0" y="340" width="800" height="210" fill="url(#glow4)"/>
+  <rect x="110" y="130" width="580" height="380" fill="#0D1526" stroke="#C9A356" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M110 130h580" stroke="#E0C184" stroke-opacity=".6" stroke-width="3"/>
+  <g stroke="#C9A356" stroke-opacity=".3" stroke-width="1.5">
+    <path d="M110 200h580M110 270h580M110 340h580M110 410h580"/>
+  </g>
+  <g fill="#C9A356" fill-opacity=".26">
+    <rect x="136" y="152" width="46" height="34"/><rect x="206" y="152" width="46" height="34"/><rect x="276" y="152" width="46" height="34"/>
+    <rect x="346" y="152" width="46" height="34"/><rect x="416" y="152" width="46" height="34"/><rect x="486" y="152" width="46" height="34"/>
+    <rect x="556" y="152" width="46" height="34"/><rect x="626" y="152" width="46" height="34"/>
+    <rect x="136" y="222" width="46" height="34"/><rect x="206" y="222" width="46" height="34"/><rect x="276" y="222" width="46" height="34"/>
+    <rect x="346" y="222" width="46" height="34"/><rect x="416" y="222" width="46" height="34"/><rect x="486" y="222" width="46" height="34"/>
+    <rect x="556" y="222" width="46" height="34"/><rect x="626" y="222" width="46" height="34"/>
+    <rect x="136" y="292" width="46" height="34"/><rect x="206" y="292" width="46" height="34"/><rect x="276" y="292" width="46" height="34"/>
+    <rect x="346" y="292" width="46" height="34"/><rect x="416" y="292" width="46" height="34"/><rect x="486" y="292" width="46" height="34"/>
+    <rect x="556" y="292" width="46" height="34"/><rect x="626" y="292" width="46" height="34"/>
+    <rect x="136" y="362" width="46" height="34"/><rect x="206" y="362" width="46" height="34"/><rect x="276" y="362" width="46" height="34"/>
+    <rect x="346" y="362" width="46" height="34"/><rect x="416" y="362" width="46" height="34"/><rect x="486" y="362" width="46" height="34"/>
+    <rect x="556" y="362" width="46" height="34"/><rect x="626" y="362" width="46" height="34"/>
+  </g>
+  <g stroke="#C9A356" stroke-opacity=".4" stroke-width="1.5" fill="none">
+    <path d="M128 192h64M198 192h64M268 192h64M338 192h64M408 192h64M478 192h64M548 192h64M618 192h64"/>
+    <path d="M128 262h64M198 262h64M268 262h64M338 262h64M408 262h64M478 262h64M548 262h64M618 262h64"/>
+    <path d="M128 332h64M198 332h64M268 332h64M338 332h64M408 332h64M478 332h64M548 332h64M618 332h64"/>
+  </g>
+  <g fill="#0D1526" stroke="#C9A356" stroke-opacity=".5" stroke-width="2">
+    <rect x="368" y="430" width="64" height="80"/>
+  </g>
+  <path d="M0 510h800" stroke="#C9A356" stroke-opacity=".45" stroke-width="2"/>
+</svg>

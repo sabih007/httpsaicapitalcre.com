@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Properties For Sale &amp; Lease — AI Capital CRE</title>
+<meta name="description" content="Browse commercial properties for sale and lease in Los Angeles and Southern California — office, retail, industrial, multifamily, mixed-use and land.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-list">
+      <span>CA DRE #02145897</span>
+      <span>Mon – Fri, 8:30am – 6:00pm PT</span>
+    </div>
+    <div class="topbar-list">
+      <a href="tel:+12132470741">+1 (213) 247-0741</a>
+      <a href="mailto:justin@aicapitalre.com">justin@aicapitalre.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AI</span>
+      <span class="brand-text"><strong>AI Capital</strong><span>Commercial Real Estate</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html">Add Listing</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--gold btn--sm" href="admin.html">List a Property</a>
+      <button class="nav-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pagehero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span>Properties</div>
+    <h1>Current inventory</h1>
+    <p>Exclusively represented commercial assets across Southern California. Filter by type, submarket, status and price — every listing includes a full underwriting package on request.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+
+    <!-- Quick status chips -->
+    <div class="chips">
+      <button class="chip" data-chip="For Sale" type="button">For Sale</button>
+      <button class="chip" data-chip="For Lease" type="button">For Lease</button>
+      <button class="chip" data-chip="Under Contract" type="button">Under Contract</button>
+      <button class="chip" data-chip="Sold" type="button">Sold</button>
+    </div>
+
+    <!-- Filters -->
+    <form class="filterbar" id="filters" autocomplete="off">
+      <div class="filter-grid">
+        <div class="field">
+          <label for="f-q">Keyword</label>
+          <input id="f-q" name="q" type="text" placeholder="Address, city, ID">
+        </div>
+        <div class="field">
+          <label for="f-type">Property type</label>
+          <select id="f-type" name="type"><option value="">All types</option></select>
+        </div>
+        <div class="field">
+          <label for="f-market">Submarket</label>
+          <select id="f-market" name="market"><option value="">All submarkets</option></select>
+        </div>
+        <div class="field">
+          <label for="f-status">Status</label>
+          <select id="f-status" name="status"><option value="">Any status</option></select>
+        </div>
+        <div class="field">
+          <label for="f-min">Min price ($)</label>
+          <input id="f-min" name="min" type="number" min="0" step="50000" placeholder="0">
+        </div>
+        <div class="field">
+          <label for="f-max">Max price ($)</label>
+          <input id="f-max" name="max" type="number" min="0" step="50000" placeholder="No max">
+        </div>
+        <div class="field" style="display:flex;align-items:flex-end">
+          <button class="btn btn--ghost btn--block" type="button" id="reset-filters">Clear all</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="results-bar">
+      <div class="count" id="results-count"></div>
+      <div class="sortwrap">
+        <label for="sort" style="margin:0">Sort by</label>
+        <select id="sort">
+          <option value="newest">Newest first</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="sf-desc">Largest building</option>
+          <option value="cap-desc">Highest cap rate</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="cards" id="results-grid"></div>
+
+    <div class="note" style="margin-top:44px">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p>
+        Price filters apply to assets offered at a lump-sum price. Lease listings are quoted per square foot
+        per month and always appear in the results. Off-market opportunities are not shown here —
+        <a href="contact.html" style="color:#6B5524;text-decoration:underline">tell us your criteria</a>
+        and we will send matches directly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow" style="justify-content:center">Owners &amp; Sponsors</span>
+      <h2>Not seeing the right fit?</h2>
+      <p>About a third of what we transact never reaches this page. Send us your buy-box — product type, submarket, cheque size and timing — and we will match you against current and pending assignments.</p>
+      <div class="cta-row">
+        <a class="btn btn--gold" href="contact.html">Share Your Criteria</a>
+        <a class="btn btn--ghost-light" href="admin.html">Add a Listing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text"><strong>AI Capital</strong><span>Commercial Real Estate</span></span>
+        </a>
+        <p>Investment sales, leasing and capital markets advisory for private capital owners across Southern California.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0117.6 8.7c3 0 3.9 1.9 3.9 5V21h-4v-6c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V21h-4z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 7.6 12h-6.3l-4.9-7.7L5.6 22H2.5l7.4-8.4L2.6 2h6.4l4.6 7.2zm-1.1 18h1.7L7.3 3.8H5.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Properties</h4>
+        <ul>
+          <li><a href="properties.html?status=For%20Sale">For Sale</a></li>
+          <li><a href="properties.html?status=For%20Lease">For Lease</a></li>
+          <li><a href="properties.html?type=Multifamily">Multifamily</a></li>
+          <li><a href="properties.html?type=Industrial">Industrial</a></li>
+          <li><a href="properties.html?type=Land">Land</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="admin.html">Add a Listing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul class="foot-contact">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>936 Crenshaw Blvd, Suite 100<br>Los Angeles, CA 90019</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <a href="tel:+12132470741">+1 (213) 247-0741</a>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <a href="mailto:justin@aicapitalre.com">justin@aicapitalre.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> AI Capital CRE. All rights reserved. CA DRE #02145897.</span>
+      <nav><a href="#">Privacy</a><a href="#">Terms</a><a href="admin.html">Manage Listings</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

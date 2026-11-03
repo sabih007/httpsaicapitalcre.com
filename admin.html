@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add &amp; Manage Listings — AI Capital CRE</title>
+<meta name="description" content="Upload, edit and manage AI Capital CRE property listings.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-list"><span>Listing Manager</span><span>AI Capital CRE</span></div>
+    <div class="topbar-list"><a href="properties.html">View live inventory →</a></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AI</span>
+      <span class="brand-text"><strong>AI Capital</strong><span>Commercial Real Estate</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html">Add Listing</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--ghost btn--sm" href="properties.html">Preview Site</a>
+      <button class="nav-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pagehero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span>Listing Manager</div>
+    <h1>Add a listing</h1>
+    <p>Fill in the asset details, drop in photos, and publish. The listing appears immediately on the Properties page and, if flagged as featured, on the homepage.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+
+    <!-- Inventory snapshot -->
+    <div class="admin-stats">
+      <div class="admin-stat"><div class="num" id="stat-total">0</div><div class="lbl">Listings</div></div>
+      <div class="admin-stat"><div class="num" id="stat-sale">0</div><div class="lbl">For Sale</div></div>
+      <div class="admin-stat"><div class="num" id="stat-lease">0</div><div class="lbl">For Lease</div></div>
+      <div class="admin-stat"><div class="num" id="stat-value">$0</div><div class="lbl">Sale Volume</div></div>
+      <div class="admin-stat"><div class="num" id="stat-sf">0K</div><div class="lbl">Total SF</div></div>
+      <div class="admin-stat"><div class="num" id="stat-storage">0 MB</div><div class="lbl">Storage Used</div></div>
+    </div>
+
+    <div class="admin-layout">
+
+      <!-- ============ Form ============ -->
+      <div>
+        <div class="admin-card">
+          <div class="admin-card-head">
+            <div>
+              <h2 id="form-mode">New listing</h2>
+              <p id="form-sub">Fields marked with an asterisk are required. Everything else is optional and simply hidden when left blank.</p>
+            </div>
+            <button class="btn btn--ghost btn--sm" type="button" id="cancel-edit" hidden>Cancel Edit</button>
+          </div>
+
+          <div class="admin-card-body">
+            <form id="listing-form" class="form-grid" autocomplete="off">
+
+              <div class="form-sep">Identity</div>
+
+              <div class="field span2">
+                <label for="l-title">Listing title *</label>
+                <input id="l-title" required placeholder="e.g. Crenshaw Boulevard Retail Plaza">
+              </div>
+
+              <div class="field span2">
+                <label for="l-address">Street address *</label>
+                <input id="l-address" required placeholder="936 Crenshaw Blvd">
+              </div>
+
+              <div class="field">
+                <label for="l-market">City / submarket *</label>
+                <input id="l-market" required placeholder="Mid-Wilshire">
+                <datalist id="market-list"></datalist>
+              </div>
+
+              <div class="field">
+                <label for="l-zip">ZIP code</label>
+                <input id="l-zip" inputmode="numeric" placeholder="90019">
+              </div>
+
+              <div class="field">
+                <label for="l-type">Property type *</label>
+                <select id="l-type" required></select>
+              </div>
+
+              <div class="field">
+                <label for="l-status">Listing status *</label>
+                <select id="l-status" required></select>
+              </div>
+
+              <div class="field">
+                <label for="l-state">State</label>
+                <input id="l-state" value="CA" maxlength="2" placeholder="CA">
+              </div>
+
+              <div class="field">
+                <label for="l-broker">Listing broker</label>
+                <input id="l-broker" placeholder="Justin Alvarez">
+              </div>
+
+              <div class="form-sep">Pricing</div>
+
+              <div class="field">
+                <label for="l-price">Price / rate *</label>
+                <input id="l-price" type="number" min="0" step="0.01" placeholder="4850000">
+              </div>
+
+              <div class="field">
+                <label for="l-price-unit">Quoted as</label>
+                <select id="l-price-unit">
+                  <option value="total">Total price ($)</option>
+                  <option value="sf-mo">Per SF / month</option>
+                  <option value="sf-yr">Per SF / year</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="l-cap">Cap rate (%)</label>
+                <input id="l-cap" type="number" min="0" max="25" step="0.1" placeholder="6.1">
+              </div>
+
+              <div class="field">
+                <label for="l-noi">Net operating income ($)</label>
+                <input id="l-noi" type="number" min="0" step="1000" placeholder="295850">
+              </div>
+
+              <div class="form-sep">Physical</div>
+
+              <div class="field">
+                <label for="l-sf">Building size (SF)</label>
+                <input id="l-sf" type="number" min="0" step="100" placeholder="12400">
+              </div>
+
+              <div class="field">
+                <label for="l-lot">Lot size (SF)</label>
+                <input id="l-lot" type="number" min="0" step="100" placeholder="21780">
+              </div>
+
+              <div class="field">
+                <label for="l-units">Units / suites</label>
+                <input id="l-units" type="number" min="0" step="1" placeholder="6">
+              </div>
+
+              <div class="field">
+                <label for="l-parking">Parking spaces</label>
+                <input id="l-parking" type="number" min="0" step="1" placeholder="34">
+              </div>
+
+              <div class="field">
+                <label for="l-year">Year built</label>
+                <input id="l-year" type="number" min="1800" max="2100" step="1" placeholder="1986">
+              </div>
+
+              <div class="field">
+                <label for="l-occupancy">Occupancy (%)</label>
+                <input id="l-occupancy" type="number" min="0" max="100" step="1" placeholder="100">
+              </div>
+
+              <div class="field span2">
+                <label for="l-zoning">Zoning</label>
+                <input id="l-zoning" placeholder="LAC2-1VL">
+              </div>
+
+              <div class="form-sep">Marketing copy</div>
+
+              <div class="field span2">
+                <label for="l-highlights">Investment highlights</label>
+                <textarea id="l-highlights" placeholder="One highlight per line, up to eight.&#10;All leases NNN with 3% annual increases&#10;38,000 vehicles per day on Crenshaw Blvd"></textarea>
+                <div class="hint">One per line. These render as the ticked list on the property page.</div>
+              </div>
+
+              <div class="field span2">
+                <label for="l-description">Property overview</label>
+                <textarea id="l-description" style="min-height:150px" placeholder="Two or three paragraphs describing the asset, the tenancy, recent capital work and the opportunity."></textarea>
+              </div>
+
+              <div class="form-sep">Photos</div>
+
+              <div class="drop" id="dropzone" tabindex="0" role="button" aria-label="Upload photos">
+                <div class="ico">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5M12 3v13"/></svg>
+                </div>
+                <strong>Drop photos here, or click to browse</strong>
+                <span>JPG, PNG or WebP · up to 6 photos · the first becomes the cover image</span>
+                <input type="file" id="file-input" accept="image/*" multiple>
+              </div>
+
+              <div class="thumbs" id="thumbs"></div>
+              <div class="hint span2" id="photo-hint" style="margin-top:0"></div>
+
+              <div class="form-sep">Publishing</div>
+
+              <label class="span2" style="display:flex;gap:11px;align-items:flex-start;cursor:pointer;font-size:.93rem;color:var(--text-2)">
+                <input type="checkbox" id="l-featured" style="width:18px;height:18px;margin-top:2px;accent-color:#C9A356;flex-shrink:0">
+                <span><strong style="display:block;color:var(--text);font-weight:600">Feature on the homepage</strong>Featured listings appear in the "Properties on the market" grid on the front page.</span>
+              </label>
+
+              <div class="span2" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+                <button class="btn btn--gold" type="submit" id="save-btn">Publish Listing</button>
+                <button class="btn btn--ghost" type="reset">Clear Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ Saved listings ============ -->
+      <div>
+        <div class="admin-card">
+          <div class="admin-card-head">
+            <div>
+              <h2>Published listings</h2>
+              <p>Click the pencil to edit, the eye to preview, the bin to delete.</p>
+            </div>
+          </div>
+          <div class="admin-card-body">
+            <div class="adm-list" id="admin-list"></div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <div class="admin-card-head">
+            <div>
+              <h2>Backup &amp; transfer</h2>
+              <p>Listings live in this browser. Export regularly.</p>
+            </div>
+          </div>
+          <div class="admin-card-body">
+            <div style="display:grid;gap:10px;margin-bottom:20px">
+              <button class="btn btn--ink btn--block" type="button" id="export-btn">Export to listings.json</button>
+              <button class="btn btn--ghost btn--block" type="button" id="import-btn">Import listings.json</button>
+              <button class="btn btn--ghost btn--block" type="button" id="reset-demo">Restore Sample Data</button>
+              <input type="file" id="import-input" accept="application/json,.json" hidden>
+            </div>
+
+            <div class="note">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <p>
+                <strong>How storage works.</strong> Because this is a static HTML site with no server,
+                listings and photos are saved in this browser's local storage — they are visible on this
+                device only, and a different computer or a cleared browser will show the sample set again.
+                Export to <code>listings.json</code> to back them up or to move them to another machine.
+                Photos are automatically downscaled to 1600px on upload; the quota is about 5MB, so keep an
+                eye on the Storage Used figure above.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:0">
+      <span>© <span data-year>2026</span> AI Capital CRE. Listing manager.</span>
+      <nav><a href="index.html">Home</a><a href="properties.html">Properties</a><a href="contact.html">Contact</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
